@@ -1,9 +1,12 @@
 #include "Asesino.h"
+#include "Soldado.h"
 
-Asesino::Asesino(int pAsesinatos, int pStealth)
+Asesino::Asesino(string pNom, string pCiudad, int pEdad, int pAsesinatos, int pStealth):Soldado(pNom, pCiudad, pEdad)
 {
 	asesinatos = pAsesinatos;
 	stealth = pStealth;
+	AtaqueSoldado = getAtaqueSoldado();
+	DefensaSoldado = getDefensaSoldado();
 }
 
 Asesino::~Asesino()
@@ -31,3 +34,12 @@ int Asesino::getStealth()
 	return stealth;
 }
 
+int Asesino::getAtaqueSoldado()
+{
+	return asesinatos;
+}
+
+int Asesino::getDefensaSoldado()
+{
+	return stealth*10;
+}
