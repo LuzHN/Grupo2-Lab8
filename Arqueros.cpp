@@ -1,9 +1,12 @@
 #include "Arqueros.h"
+#include "Soldado.h"
 
 Arqueros::Arqueros(int pFlechas, double pPrecision)
 {
 	flechas = pFlechas;
 	precision = pPrecision;
+	soldado.setAtaque(calcularAtaque);
+	soldado.setDefensa(calcularDefensa);
 }
 
 Arqueros::~Arqueros()
