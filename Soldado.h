@@ -29,8 +29,8 @@ class Soldado{
 		void setEdadSoldado(int);
 		int getEdadSoldado();
 
-		int getAtaqueSoldado();
-		int getDefensaSoldado();
+		virtual int getAtaqueSoldado();
+		virtual int getDefensaSoldado();
 
 
 };
