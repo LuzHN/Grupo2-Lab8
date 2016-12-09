@@ -97,6 +97,7 @@ int main(){
 				}
 					else{
 						bando1.push_back(esc);
+						printw("");
 					}
 					
 				} else if(bando == '2'){
