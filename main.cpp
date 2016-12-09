@@ -175,6 +175,14 @@ int main(){
 							break;
 						} 
 						case '2':{
+							printw("\n \n Ingrese cantidad de lanzas: ");
+							char lanzas;
+
+							lanzas = getch();
+
+							int lanzasInt = lanzas - '0';
+
+							printw("\n \n ")
 							break;
 						} 
 						case '3':{
