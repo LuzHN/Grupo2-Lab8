@@ -40,6 +40,7 @@ int main(){
 				refresh();
 
 				getstr(nombreEscuadron);
+				clear();
 
 				clear();
 
@@ -53,6 +54,7 @@ int main(){
 				char bando;
 
 				bando = getch();
+				clear();
 
 				clear();
 
@@ -64,6 +66,7 @@ int main(){
 				char tip;
 
 				tip = getch();
+				clear();
 
 				clear();
 
@@ -210,8 +213,7 @@ int main(){
 							lanzas = getch();
 
 							int lanzasInt = lanzas - '0';
-
-							//printw("\n \n ")
+							printw("\n \n ");
 							break;
 						} 
 						case '3':{
