@@ -1,4 +1,4 @@
-main: main.o Escuadron.o CorazasDuras.o Asesino.o Soldado.o Arquero.o
+main: 	main.o Escuadron.o CorazasDuras.o Asesino.o Soldado.o Arquero.o
 	g++ main.o Escuadron.o CorazasDuras.o Asesino.o Soldado.o Arquero.o -lncurses -o main
 
 main.o: main.cpp Escuadron.h CorazasDuras.h Asesino.h Soldado.h Arquero.h
