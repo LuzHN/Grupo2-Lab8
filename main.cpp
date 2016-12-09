@@ -76,43 +76,51 @@ int main(){
 
 				if(bando == '1'){
 					
+					if(esc->getTipo()=='2'){
+						int cont = 0;
 
-					int cont = 0;
-
-					for (int i = 0; i < bando1.size(); ++i)
-					{
-						if(bando1.at(i) -> getTipo() == '2'){
-							cont++;
+						for (int i = 0; i < bando1.size(); ++i)
+						{
+							if(bando1.at(i) -> getTipo() == '2'){
+								cont++;
+							}
 						}
-					}
 
-					if(cont != 0){
-						printw("\n \n No puede agregar mas escuadrones de Vanguardia al bando 1");
-						refresh();
-					} else{
-						bando1.push_back(esc);
-						printw("\n Se ha agregado al bando 1");
-						refresh();
+						if(cont == 1){
+							printw("\n \n No puede agregar mas escuadrones de Vanguardia al bando 1");
+							refresh();
+						} else{
+							bando1.push_back(esc);
+							printw("\n Se ha agregado al bando 1");
+							refresh();
 					}
+				}
+					else{
+						bando1.push_back(esc);
+					}
+					
 				} else if(bando == '2'){
 					
 					int cont = 0;
+					if(esc->getTipo()=='2'){
+						for (int i = 0; i < bando2.size(); ++i)
+						{
+							if(bando2.at(i) -> getTipo() == '2'){
+								cont++;
+							}
+						}
 
-					for (int i = 0; i < bando2.size(); ++i)
-					{
-						if(bando2.at(i) -> getTipo() == '2'){
-							cont++;
+						if(cont == 1){
+							printw("\n \n No puede agregar mas escuadrones de Vanguardia al bando 2");
+							refresh();
+						} else{
+							bando2.push_back(esc);
+							printw("\n Se ha agregado al bando 2");
+							refresh();
 						}
 					}
-
-					if(cont = 1){
-						printw("\n \n No puede agregar mas escuadrones de Vanguardia al bando 2");
-						refresh();
-					} else{
+					else
 						bando2.push_back(esc);
-						printw("\n Se ha agregado al bando 2");
-						refresh();
-					}
 				} else{
 					printw("\n Valor ingresado incorrecto.");
 					refresh();
