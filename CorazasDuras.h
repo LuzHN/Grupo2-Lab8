@@ -7,6 +7,7 @@ class CorazasDuras: public Soldado{
 private: 
  	int dureza;
  	int cantidadLanzas;
+ 	
 public:
 	CorazasDuras();
 	~CorazasDuras();
@@ -14,6 +15,7 @@ public:
 	int getDureza();
 	void setCantidadLanzas(int);
 	int getCantidadLanzas();
-
+	int ataqueCD();
+	int 
 };
 #endif
