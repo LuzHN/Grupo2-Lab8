@@ -18,7 +18,7 @@ int CorazasDuras::getDureza(){
 }
 
 void CorazasDuras::setCantidadLanzas(int pCantiadadLanzas){
-	cantidadLanzas = pCantiadadLanzas
+	cantidadLanzas = pCantiadadLanzas;
 }
 
 int CorazasDuras::getCantidadLanzas(){

@@ -13,7 +13,7 @@ class Asesino: public Soldado
 		~Asesino();
 		void setAsesinatos(int);
 		int getAsesinatos();
-		void setStealth();
+		void setStealth(int);
 		int getStealth();
 		int calcularAtaque();
 		int calcularDefensa();
