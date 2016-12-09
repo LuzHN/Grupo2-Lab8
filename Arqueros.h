@@ -5,15 +5,16 @@ class Arqueros: public Soldado
 {
 	private:
 		int flechas;
-		double precision;
+		int precision;
 
 	public:
-		Arqueros(string,string,int,int,double);
+		Arqueros(string,string,int,int,int);
 		~Arqueros();
 		void setFlechas(int);
 		int getFlechas();
-		void setPrecision(double);
-		double getPrecision();
-		int calcularAtaque();
+		void setPrecision(int);
+		int getPrecision();
+		virtual int getAtaqueSoldado();
+		virtual int getDefensaSoldado();
 
 };

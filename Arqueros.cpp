@@ -1,12 +1,12 @@
 #include "Arqueros.h"
 #include "Soldado.h"
 
-Arqueros::Arqueros(string pNom, string pCiudad, int pEdad, int pFlechas, double pPrecision):Soldado(pNom, pCiudad, pEdad)
+Arqueros::Arqueros(string pNom, string pCiudad, int pEdad, int pFlechas, int pPrecision):Soldado(pNom, pCiudad, pEdad)
 {
 	flechas = pFlechas;
 	precision = pPrecision;
-	AtaqueSoldado = calcularAtaque();
-	DefensaSoldado = 0;
+	AtaqueSoldado = getAtaqueSoldado();
+	DefensaSoldado = getDefensaSoldado();
 }
 
 Arqueros::~Arqueros()
@@ -24,17 +24,22 @@ int Arqueros::getFlechas()
 	return flechas;
 }
 
-void Arqueros::setPrecision(double pPrecision)
+void Arqueros::setPrecision(int pPrecision)
 {
 	precision = pPrecision;
 }
 
-double Arqueros::getPrecision()
+int Arqueros::getPrecision()
 {
 	return precision;
 }
 
-int Arqueros::calcularAtaque()
+int Arqueros::getAtaqueSoldado()
 {
 	return flechas*(precision/1000);
+}
+
+int Arqueros::getDefensaSoldado()
+{
+	return 0;
 }

@@ -10,8 +10,8 @@ CorazasDuras::CorazasDuras(string pNom, string pCiudad, int pEdad, int pDureza, 
 {
 	dureza = pDureza;
 	cantidadLanzas = pLanzas;
-	AtaqueSoldado = cantidadLanzas;
-	DefensaSoldado = dureza;
+	AtaqueSoldado = getAtaqueSoldado();
+	DefensaSoldado = getDefensaSoldado();
 }
 
 CorazasDuras::~CorazasDuras(){
@@ -32,4 +32,14 @@ void CorazasDuras::setCantidadLanzas(int pCantiadadLanzas){
 
 int CorazasDuras::getCantidadLanzas(){
 	return cantidadLanzas;
+}
+
+int CorazasDuras::getAtaqueSoldado()
+{
+	return cantidadLanzas;
+}
+
+int CorazasDuras::getDefensaSoldado()
+{
+	return dureza;
 }

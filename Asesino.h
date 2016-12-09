@@ -20,4 +20,6 @@ class Asesino: public Soldado
 		int getDefensa();
 		int calcularAtaque();
 		int calcularDefensa();
+		virtual int getAtaqueSoldado();
+		virtual int getDefensaSoldado();
 };

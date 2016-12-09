@@ -16,5 +16,7 @@ public:
 	int getDureza();
 	void setCantidadLanzas(int);
 	int getCantidadLanzas();
+	virtual int getAtaqueSoldado();
+	virtual int getDefensaSoldado();
 };
 #endif

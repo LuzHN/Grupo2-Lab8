@@ -5,8 +5,8 @@ Asesino::Asesino(string pNom, string pCiudad, int pEdad, int pAsesinatos, int pS
 {
 	asesinatos = pAsesinatos;
 	stealth = pStealth;
-	AtaqueSoldado = calcularAtaque();
-	DefensaSoldado = calcularDefensa();
+	AtaqueSoldado = getAtaqueSoldado();
+	DefensaSoldado = getDefensaSoldado();
 }
 
 Asesino::~Asesino()
@@ -34,12 +34,12 @@ int Asesino::getStealth()
 	return stealth;
 }
 
-int Asesino::calcularAtaque()
+int Asesino::getAtaqueSoldado()
 {
 	return asesinatos;
 }
 
-int Asesino::calcularDefensa()
+int Asesino::getDefensaSoldado()
 {
 	return stealth*10;
 }
