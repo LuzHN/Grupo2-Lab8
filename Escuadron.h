@@ -14,9 +14,11 @@ class Escuadron{
 		vector<Soldado*> soldados;
 		int AtaqueEscuadron;
 		int DefensaEscuadron;
+		char tipo;
 
 	public:
 
+		Escuadron(string);
 		Escuadron();
 		~Escuadron();
 
@@ -28,6 +30,9 @@ class Escuadron{
 
 		int getAtaqueEscuadron(vector<Soldado*>);
 		int getDefensaEscuadron(vector<Soldado*>);
+
+		void setTipo(char);
+		char getTipo();
 
 };
 

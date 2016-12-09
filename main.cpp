@@ -24,28 +24,172 @@ int main(){
 	vector<Escuadron*> bando2;
 
 
-	int opcion = 0;
+	char opcion;
 
-	while(opcion != 4){
+	while(opcion != '4'){
 		opcion = ImpresionMenu();
-
-
 
 		
 
 		switch(opcion){
-			case 1:{ //crear escuadron
-				printw("prueba");
+			case '1':{ //crear escuadron
+				
+				char nombreEscuadron[50];
+
+				printw("\n \n Ingrese nombre del escuadron: ");
+				refresh();
+
+				getstr(nombreEscuadron);
+
+				Escuadron* esc = new Escuadron(nombreEscuadron);
+
+				printw("\n \n Ingrese a que bando se va agregar ese escuadron:  \n"
+								"1. Bando 1.\n"
+								"2. Bando 2. \n");
+				refresh();
+
+				char bando;
+
+				bando = getch();
+
+				printw("\n \n Ingrese que tipo de escuadron:  \n"
+							"1. Frontal \n"
+							"2. Vanguardia\n");
+				refresh();
+
+				char tip;
+
+				tip = getch();
+
+				if(tip == '1'){
+					esc -> setTipo('1');
+				}
+				if(tip == '2'){
+					esc -> setTipo('2');
+				} 
+
+				if(bando == '1'){
+					printw("\n Se ha agregado al bando 1");
+					refresh();
+
+					int cont;
+
+					for (int i = 0; i < bando1.size(); ++i)
+					{
+						if(bando1.at(i) -> getTipo() == '2'){
+							cont++;
+						}
+					}
+
+					if(cont > 1){
+						printw("\n \n No puede agregar mas escuadrones de Vanguardia al bando 1");
+						refresh();
+					} else{
+						bando1.push_back(esc);
+					}
+				} else if(bando == '2'){
+					printw("\n Se ha agregado al segundo bando.");
+					refresh();
+					int cont;
+
+					for (int i = 0; i < bando1.size(); ++i)
+					{
+						if(bando1.at(i) -> getTipo() == '2'){
+							cont++;
+						}
+					}
+
+					if(cont > 1){
+						printw("\n \n No puede agregar mas escuadrones de Vanguardia al bando 2");
+						refresh();
+					} else{
+						bando2.push_back(esc);
+					}
+				} else{
+					printw("\n Valor ingresado incorrecto.");
+					refresh();
+				}
+
 				break;
 			}
-			case 2:{ //crear soldado
+			case '2':{ //crear soldado
+				printw("\n \n Ingrese el nombre del soldado: ");
+				refresh();
+
+				char nombre[20];
+
+				getstr(nombre);
+
+				printw("\n \n Ingrese ciudad del soldado: ");
+				refresh();
+
+				char ciudad[20];
+
+				getstr(ciudad);
+
+				printw("\n \n Ingrese edad del soldado: ");
+
+				char edad;
+
+				edad = getch();
+
+				int ed = edad - '0';
+
+				if(ed <= 0){
+					printw("\n \n Edad invalida");
+					refresh();
+				} else{
+					printw("\n \n Ingrese tipo de soldado: "
+								"1. Arquero. \n"
+								"2. Coraza Dura. \n"
+								"3. Asesino. \n \n");
+					refresh();
+
+					char tipo;
+					tipo = getch();
+
+					switch(tipo){
+						case '1':{
+							printw("\n \n Ingrese cantidad de flechas: ");
+							char flechas;
+
+							flechas = getch();
+
+							int flechasInt = flechas - '0';
+
+							printw("\n \n Ingrese precision del arquero: ");
+							char precision;
+
+							precision = getch();
+
+							int precisionInt = precision - '0';
+
+							if(flechasInt < 0 || precisionInt < 0){
+								printw("\n \n No puede ingresar valores negativos.");
+								refresh();
+							} else{
+								Soldado* sol = new Arqueros(nombre, ciudad, ed, flechas, precisionInt);
+							}
+
+							
+							break;
+						} 
+						case '2':{
+							break;
+						} 
+						case '3':{
+							break;
+						}
+					}
+				}
 				break;
 			}
-			case 3:{ //empezar sim
+			case '3':{ //empezar sim
 				break;
 			}
-			case 4:{ //salir
+			case '4':{ //salir
 				printw("\n\n Saliendo...");
+				refresh();
 				endwin();
 				break;
 			}
@@ -54,20 +198,22 @@ int main(){
 			}
 		}
 	}
+	endwin();
 	return 0;
 }
 
 int ImpresionMenu(){
-	int opcion = 0;
+	char opcion;
 	printw("\n \n ====================== M e n u ================================\n"
 				"\n"
 				"1. Agregar Escuadron. \n"
 				"2. Agregar Soldado. \n"
 				"3. Empezar Sim. \n"
 				"4. Salir. \n \n");
+
 	refresh();
 	opcion = getch();
-	cleanScreen();
+	clear();
 
 	return opcion;
 

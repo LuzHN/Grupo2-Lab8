@@ -8,6 +8,10 @@ Escuadron :: ~Escuadron(){
 
 }
 
+Escuadron :: Escuadron(string nom){
+	NombreEscuadron = nom;
+}
+
 void Escuadron :: setNombreEscuadron(string pNombre){
 	NombreEscuadron = pNombre;
 }
@@ -44,4 +48,12 @@ int Escuadron :: getDefensaEscuadron(vector<Soldado*> sol){
 	}
 
 	return defensa;
+}
+
+void Escuadron :: setTipo(char tip){
+	tipo = tip;
+}
+
+char Escuadron :: getTipo(){
+	return tipo;
 }
