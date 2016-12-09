@@ -12,6 +12,8 @@ class Escuadron{
 	protected:
 		string NombreEscuadron;
 		vector<Soldado*> soldados;
+		int AtaqueEscuadron;
+		int DefensaEscuadron;
 
 	public:
 
@@ -23,6 +25,9 @@ class Escuadron{
 
 		void addSoldado(Soldado*);
 		Soldado* getSoldado(int);
+
+		int getAtaqueEscuadron(vector<Soldado*>);
+		int getDefensaEscuadron(vector<Soldado*>);
 
 };
 

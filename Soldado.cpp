@@ -5,6 +5,12 @@ Soldado :: Soldado(){
 
 }
 
+Soldado :: Soldado(string pnom, string pciudad, int edad){
+	NombreSoldado = pnom;
+	CiudadProcedencia = pciudad;
+	EdadSoldado = edad;
+}
+
 Soldado :: ~Soldado(){
 
 }
@@ -31,5 +37,13 @@ void Soldado :: setEdadSoldado(int pEdad){
 
 int Soldado :: getEdadSoldado(){
 	return EdadSoldado;
+}
+
+int Soldado :: getAtaqueSoldado(){
+	return AtaqueSoldado;
+}
+
+int Soldado :: getDefensaSoldado(){
+	return DefensaSoldado;
 }
 

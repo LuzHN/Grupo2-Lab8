@@ -11,8 +11,12 @@ class Soldado{
 		string CiudadProcedencia;
 		int EdadSoldado;
 
+		int AtaqueSoldado;
+		int DefensaSoldado;
+
 	public:
 
+		Soldado(string, string, int);
 		Soldado();
 		~Soldado();
 		
@@ -24,6 +28,9 @@ class Soldado{
 
 		void setEdadSoldado(int);
 		int getEdadSoldado();
+
+		int getAtaqueSoldado();
+		int getDefensaSoldado();
 
 
 };
