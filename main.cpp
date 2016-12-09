@@ -41,6 +41,8 @@ int main(){
 
 				getstr(nombreEscuadron);
 
+				clear();
+
 				Escuadron* esc = new Escuadron(nombreEscuadron);
 
 				printw("\n \n Ingrese a que bando se va agregar ese escuadron:  \n"
@@ -52,6 +54,8 @@ int main(){
 
 				bando = getch();
 
+				clear();
+
 				printw("\n \n Ingrese que tipo de escuadron:  \n"
 							"1. Frontal \n"
 							"2. Vanguardia\n");
@@ -61,6 +65,8 @@ int main(){
 
 				tip = getch();
 
+				clear();
+
 				if(tip == '1'){
 					esc -> setTipo('1');
 				}
@@ -69,10 +75,9 @@ int main(){
 				} 
 
 				if(bando == '1'){
-					printw("\n Se ha agregado al bando 1");
-					refresh();
+					
 
-					int cont;
+					int cont = 0;
 
 					for (int i = 0; i < bando1.size(); ++i)
 					{
@@ -81,29 +86,32 @@ int main(){
 						}
 					}
 
-					if(cont > 1){
+					if(cont != 0){
 						printw("\n \n No puede agregar mas escuadrones de Vanguardia al bando 1");
 						refresh();
 					} else{
 						bando1.push_back(esc);
+						printw("\n Se ha agregado al bando 1");
+						refresh();
 					}
 				} else if(bando == '2'){
-					printw("\n Se ha agregado al segundo bando.");
-					refresh();
-					int cont;
+					
+					int cont = 0;
 
-					for (int i = 0; i < bando1.size(); ++i)
+					for (int i = 0; i < bando2.size(); ++i)
 					{
-						if(bando1.at(i) -> getTipo() == '2'){
+						if(bando2.at(i) -> getTipo() == '2'){
 							cont++;
 						}
 					}
 
-					if(cont > 1){
+					if(cont = 1){
 						printw("\n \n No puede agregar mas escuadrones de Vanguardia al bando 2");
 						refresh();
 					} else{
 						bando2.push_back(esc);
+						printw("\n Se ha agregado al bando 2");
+						refresh();
 					}
 				} else{
 					printw("\n Valor ingresado incorrecto.");
@@ -120,6 +128,8 @@ int main(){
 
 				getstr(nombre);
 
+				clear();
+
 				printw("\n \n Ingrese ciudad del soldado: ");
 				refresh();
 
@@ -127,11 +137,15 @@ int main(){
 
 				getstr(ciudad);
 
+				clear();
+
 				printw("\n \n Ingrese edad del soldado: ");
 
 				char edad;
 
 				edad = getch();
+
+				clear();
 
 				int ed = edad - '0';
 
@@ -148,6 +162,8 @@ int main(){
 					char tipo;
 					tipo = getch();
 
+					clear();
+
 					switch(tipo){
 						case '1':{
 							printw("\n \n Ingrese cantidad de flechas: ");
@@ -155,12 +171,16 @@ int main(){
 
 							flechas = getch();
 
+							clear();
+
 							int flechasInt = flechas - '0';
 
 							printw("\n \n Ingrese precision del arquero: ");
 							char precision;
 
 							precision = getch();
+
+							clear();
 
 							int precisionInt = precision - '0';
 
@@ -182,7 +202,7 @@ int main(){
 
 							int lanzasInt = lanzas - '0';
 
-							printw("\n \n ")
+							//printw("\n \n ")
 							break;
 						} 
 						case '3':{
