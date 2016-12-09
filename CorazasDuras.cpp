@@ -2,7 +2,8 @@
 #include <iostream>
 #include "Soldado.h"
 
-CorazasDuras::CorazasDuras(){
+CorazasDuras::CorazasDuras()
+{
 
 }
 
@@ -14,7 +15,8 @@ CorazasDuras::CorazasDuras(string pNom, string pCiudad, int pEdad, int pDureza, 
 	DefensaSoldado = getDefensaSoldado();
 }
 
-CorazasDuras::~CorazasDuras(){
+CorazasDuras::~CorazasDuras()
+{
 
 }
 

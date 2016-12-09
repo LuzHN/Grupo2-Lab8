@@ -40,6 +40,7 @@ int main(){
 				refresh();
 
 				getstr(nombreEscuadron);
+				clear();
 
 				Escuadron* esc = new Escuadron(nombreEscuadron);
 
@@ -51,6 +52,7 @@ int main(){
 				char bando;
 
 				bando = getch();
+				clear();
 
 				printw("\n \n Ingrese que tipo de escuadron:  \n"
 							"1. Frontal \n"
@@ -60,6 +62,7 @@ int main(){
 				char tip;
 
 				tip = getch();
+				clear();
 
 				if(tip == '1'){
 					esc -> setTipo('1');
@@ -182,7 +185,7 @@ int main(){
 
 							int lanzasInt = lanzas - '0';
 
-							printw("\n \n ")
+							printw("\n \n ");
 							break;
 						} 
 						case '3':{
