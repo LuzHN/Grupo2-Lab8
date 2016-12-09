@@ -1,7 +1,7 @@
 #pragma once
 #include "Soldado.h"
 
-class Soldado: public Soldado
+class Arqueros: public Soldado
 {
 	private:
 		int flechas;

@@ -15,7 +15,5 @@ public:
 	int getDureza();
 	void setCantidadLanzas(int);
 	int getCantidadLanzas();
-	int ataqueCD();
-	int 
 };
 #endif
