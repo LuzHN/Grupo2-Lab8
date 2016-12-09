@@ -8,7 +8,7 @@ class Arqueros: public Soldado
 		double precision;
 
 	public:
-		Arqueros(int,double);
+		Arqueros(string,string,int,int,double);
 		~Arqueros();
 		void setFlechas(int);
 		int getFlechas();

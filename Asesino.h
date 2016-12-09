@@ -10,7 +10,7 @@ class Asesino: public Soldado
 		int defensa;
 
 	public:
-		Asesino(int,int);
+		Asesino(string,string,int,int,int);
 		~Asesino();
 		void setAsesinatos(int);
 		int getAsesinatos();
@@ -18,6 +18,6 @@ class Asesino: public Soldado
 		int getStealth();
 		int getAtaque();
 		int getDefensa();
-		void calcularAtaque();
-		void calcularDefensa();
+		int calcularAtaque();
+		int calcularDefensa();
 };
