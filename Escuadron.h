@@ -28,8 +28,8 @@ class Escuadron{
 		void addSoldado(Soldado*);
 		Soldado* getSoldado(int);
 
-		int getAtaqueEscuadron(vector<Soldado*>);
-		int getDefensaEscuadron(vector<Soldado*>);
+		int getAtaqueEscuadron();
+		int getDefensaEscuadron();
 
 		void setTipo(char);
 		char getTipo();

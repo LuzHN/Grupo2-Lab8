@@ -28,23 +28,23 @@ Soldado* Escuadron :: getSoldado(int pos){
 	return soldados.at(pos);
 }
 
-int Escuadron :: getAtaqueEscuadron(vector<Soldado*> sol){
+int Escuadron :: getAtaqueEscuadron(){
 	int ataque = 0;
 
-	for (int i = 0; i < sol.size(); ++i)
+	for (int i = 0; i < soldados.size(); ++i)
 	{
-		ataque = ataque + sol.at(i) -> getAtaqueSoldado();
+		ataque = ataque + soldados.at(i) -> getAtaqueSoldado();
 	}
 
 	return ataque;
 }
 
-int Escuadron :: getDefensaEscuadron(vector<Soldado*> sol){
+int Escuadron :: getDefensaEscuadron(){
 	int defensa = 0;
 
-	for (int i = 0; i < sol.size(); ++i)
+	for (int i = 0; i < soldados.size(); ++i)
 	{
-		defensa = defensa + sol.at(i) -> getDefensaSoldado();
+		defensa = defensa + soldados.at(i) -> getDefensaSoldado();
 	}
 
 	return defensa;
